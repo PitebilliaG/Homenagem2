@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Homenagem à Melhor Mãe do Mundo</title>
+  <style>
+    :root{
+      --bg:#0a0820;
+      --accent:#ff8fab;
+      --accent2:#ffd166;
+      --accent3:#8ecae6;
+      --text:#f7f7f7;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui,Arial,sans-serif;
+      color:var(--text);
+      background:radial-gradient(circle at top,#1a1333 0%,#0a0820 90%);
+      overflow-x:hidden;
+    }
+    .centered{display:flex;justify-content:center;align-items:center;height:100vh;flex-direction:column;text-align:center;}
+    button.start{
+      font-size:26px;
+      padding:22px 42px;
+      border:none;
+      border-radius:50px;
+      background:linear-gradient(45deg,var(--accent),var(--accent2));
+      color:#111;
+      font-weight:700;
+      cursor:pointer;
+      box-shadow:0 0 35px rgba(255,192,203,0.6);
+      animation:pulse 2s infinite;
+    }
+    @keyframes pulse{0%{box-shadow:0 0 25px rgba(255,192,203,0.4);}50%{box-shadow:0 0 60px rgba(255,192,203,0.9);}100%{box-shadow:0 0 25px rgba(255,192,203,0.4);}}
+
+    .wrap{max-width:1100px;margin:auto;padding:30px;display:none;animation:fadeIn 1.5s ease forwards;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+    header{text-align:center;margin-bottom:20px;}
+    header .logo{width:180px;height:180px;margin:auto;border-radius:50%;border:8px solid var(--accent2);overflow:hidden;box-shadow:0 0 40px var(--accent2);animation:glow 3s infinite alternate;}
+    header .logo img{width:100%;height:100%;object-fit:cover;}
+    @keyframes glow{from{box-shadow:0 0 20px var(--accent2);}to{box-shadow:0 0 60px var(--accent2);}}
+    header h1{font-size:40px;color:var(--accent2);margin:18px 0 0;}
+
+    .slideshow{position:relative;height:480px;overflow:hidden;border-radius:20px;margin:20px 0;box-shadow:0 0 40px rgba(255,255,255,0.2);}
+    .slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;}
+    .slide.active{opacity:1;}
+    .slide img{width:100%;height:100%;object-fit:cover;filter:brightness(0.9);}
+
+    .message{background:rgba(255,255,255,0.08);padding:25px;border-radius:20px;margin-top:20px;text-align:center;backdrop-filter:blur(10px);box-shadow:0 0 30px rgba(255,255,255,0.1);}
+    .message h2{color:var(--accent3);font-size:30px;margin-bottom:12px;}
+    .message p{font-size:20px;line-height:1.6;}
+
+    .hearts-area{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:10;}
+    .heart{
+      position:absolute;width:22px;height:22px;background:var(--accent);
+      transform:rotate(45deg);
+      animation:float 8s linear infinite;
+    }
+    .heart::before,.heart::after{
+      content:'';position:absolute;width:22px;height:22px;background:inherit;border-radius:50%;
+    }
+    .heart::before{top:-11px;left:0;}
+    .heart::after{left:-11px;top:0;}
+    @keyframes float{
+      0%{transform:translateY(100vh) scale(0.6) rotate(45deg);opacity:1;}
+      100%{transform:translateY(-10vh) scale(1.4) rotate(45deg);opacity:0;}
+    }
+
+    footer{text-align:center;margin:40px 0;font-size:16px;color:#ccc;}
+    footer strong{color:var(--accent2);}
+  </style>
+</head>
+<body>
+
+  <div class="centered" id="startScreen">
+    <h2 style="color:var(--accent3);font-weight:400;">Uma homenagem feita com todo o amor do mundo...</h2>
+    <button class="start" onclick="startShow()">💖 Clique aqui 💖</button>
+  </div>
+
+  <div class="wrap" id="content">
+    <header>
+      <div class="logo"><img src="IMG-20251031-WA0024.jpg" alt="Mãe"></div>
+      <h1>Para a Melhor Mãe do Mundo</h1>
+    </header>
+
+    <div class="slideshow" id="slideshow">
+      <div class="slide active"><img src="IMG-20251031-WA0024.jpg"></div>
+      <div class="slide"><img src="IMG-20251031-WA0025.jpg"></div>
+      <div class="slide"><img src="IMG-20251031-WA0026.jpg"></div>
+      <div class="slide"><img src="IMG-20251031-WA0027.jpg"></div>
+      <div class="slide"><img src="IMG-20251031-WA0028.jpg"></div>
+      <div class="slide"><img src="IMG-20251031-WA0029.jpg"></div>
+      <div class="slide"><img src="IMG-20251031-WA0030.jpg"></div>
+      <div class="slide"><img src="IMG-20251031-WA0031.jpg"></div>
+    </div>
+
+    <div class="message">
+      <h2>Com todo o amor do mundo 💕</h2>
+      <p>Você é o coração da nossa história, mãe. O abraço que acalma, o sorriso que aquece, a coragem que inspira. A cada dia, você nos ensina que amor verdadeiro é feito de gestos, paciência e sonhos compartilhados. 🌷</p>
+      <p>Que essa nova fase seja repleta de alegria, saúde e momentos mágicos. Que tudo se renove, que tudo floresça, e que cada amanhecer traga mais motivos para sorrir. ✨</p>
+      <p style="margin-top:12px;color:var(--accent2);font-weight:bold;font-size:22px;">Estamos esperando você, Miguel 💫</p>
+      <p style="margin-top:12px;color:var(--accent2);font-weight:bold;font-size:20px;">E então... vamos começar tudo de novo. 🌸</p>
+    </div>
+
+    <footer>Feito com <strong>amor infinito</strong> — porque você merece o universo inteiro, mãe. 💞</footer>
+  </div>
+
+  <div class="hearts-area" id="hearts"></div>
+
+  <script>
+    function startShow(){
+      document.getElementById('startScreen').style.display='none';
+      document.getElementById('content').style.display='block';
+      launchHearts();
+      startSlideshow();
+    }
+
+    function startSlideshow(){
+      const slides=document.querySelectorAll('.slide');
+      let i=0;
+      setInterval(()=>{
+        slides[i].classList.remove('active');
+        i=(i+1)%slides.length;
+        slides[i].classList.add('active');
+      },4000);
+    }
+
+    function launchHearts(){
+      const heartsContainer=document.getElementById('hearts');
+      setInterval(()=>{
+        for(let j=0;j<3;j++){
+          const heart=document.createElement('div');
+          heart.classList.add('heart');
+          heart.style.left=Math.random()*100+'%';
+          heart.style.background=Math.random()>0.5?'var(--accent)':'var(--accent2)';
+          heart.style.animationDuration=(6+Math.random()*5)+'s';
+          heartsContainer.appendChild(heart);
+          setTimeout(()=>heart.remove(),10000);
+        }
+      },300);
+    }
+  </script>
+
+</body>
+</html>
